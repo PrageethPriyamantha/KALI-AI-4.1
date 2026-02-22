@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KALI AI - Dev Release</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glass-container">
+        <header>
+            <h1>🔮 KALI AI V4</h1>
+            <div class="nav-links">
+                <button onclick="openModal('about-modal')">About</button>
+                <button onclick="openModal('privacy-modal')">Privacy Policy</button>
+            </div>
+        </header>
+        
+        <div class="controls">
+            <select id="model-select">
+                <option value="qwen/qwen-2-7b-instruct:free">KALI CODING AI 4.0</option>
+                <option value="google/gemini-2.0-flash-exp:free" selected>KALI PRO 4.1</option>
+                <option value="meta-llama/llama-3-8b-instruct:free">KALI 4.0</option>
+                <option value="mistralai/mistral-7b-instruct:free">KALI CODE 2.1</option>
+                <option value="huggingfaceh4/zephyr-7b-beta:free">KALI CHAT 4.1</option>
+            </select>
+        </div>
+
+        <div id="chat-box" class="chat-box">
+            <div class="message system-msg">Chat With KALI...</div>
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="ඔබේ ප්‍රශ්නය මෙහි ටයිප් කරන්න..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()">Send 🚀</button>
+        </div>
+    </div>
+
+    <div id="about-modal" class="modal">
+        <div class="modal-content glass-effect">
+            <span class="close" onclick="closeModal('about-modal')">&times;</span>
+            <h2>About KALI AI</h2>
+            <p>KALI AI is a powerful, multi-model AI assistant developed specifically for the Dev-Release blog. Engineered and designed by <strong>Master Prageeth</strong>, this system provides cutting-edge conversational intelligence, coding assistance, and problem-solving capabilities.</p>
+        </div>
+    </div>
+
+    <div id="privacy-modal" class="modal">
+        <div class="modal-content glass-effect">
+            <span class="close" onclick="closeModal('privacy-modal')">&times;</span>
+            <h2>Privacy Policy</h2>
+            <p>ඔබගේ පෞද්ගලිකත්වය අපට වැදගත් වේ. KALI AI හරහා යවන පණිවිඩ හා කිසිදු සංවේදී තොරතුරක් අපගේ දත්ත ගබඩාවල ස්ථිරවම තබා නොගනී. කරුණාකර මුරපද, API KEY හෝ බැංකු තොරතුරු මෙහි ලබා දීමෙන් වළකින්න.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
